@@ -153,3 +153,7 @@ button {
     color: #F1F3F4;
     font-size: 1.5rem;
 }
+
+
+/* Your site must support distinct layouts for large and small screens using media queries. Use comments to note where you completed this requirement.
+You may do this in a variety of ways. For example, you can move images or switch blocks between rows (for large screens) and columns (for small). */
