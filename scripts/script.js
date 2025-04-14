@@ -1,4 +1,7 @@
-
+// Make carousel not move by itself
+$('.carousel').carousel({
+    interval: false,
+  });
 
 
 

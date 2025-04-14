@@ -36,9 +36,6 @@ button {
     gap: 1.5rem;
 }
 
-.dropdown {
-    position: relative;
-}
 
 .nav-label {
     background-color: #AB644B;
@@ -47,28 +44,6 @@ button {
     font-size: 2rem;
     padding-right: 1rem;
     color: black;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #AB644B;
-    z-index: 10;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content li {
-    font-size: 1.5rem;
-    color: white;
-}
-
-.dropdown-content li:hover {
-    color: white;
 }
 
 .parent {
@@ -130,6 +105,19 @@ button {
     right: 0;
 }
 
+.div2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.div2 img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+} 
+
 .div5 {
     grid-column: span 4 / span 4;
     grid-row: span 2 / span 2;
@@ -153,7 +141,3 @@ button {
     color: #F1F3F4;
     font-size: 1.5rem;
 }
-
-
-/* Your site must support distinct layouts for large and small screens using media queries. Use comments to note where you completed this requirement.
-You may do this in a variety of ways. For example, you can move images or switch blocks between rows (for large screens) and columns (for small). */
