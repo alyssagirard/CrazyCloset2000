@@ -15,6 +15,7 @@ html, body {
 .logo {
     font-size: 3rem;
     margin: 0;
+    font-family: sans-serif;
 }
 
 ul {
@@ -25,10 +26,10 @@ ul {
 
 button {
     cursor: pointer;
-    background-color: #AB644B;
     border: none;
     padding: 0.5rem 1rem;
     text-align: left;
+    font-family: sans-serif;
 }
 
 .main-nav .nav-list {
@@ -141,3 +142,16 @@ button {
     color: #F1F3F4;
     font-size: 1.5rem;
 }
+
+.carousel-item img {
+    height: 12rem;
+    object-fit: contain;
+}
+
+
+/* Small screens */
+/* @media (min-width:320px) { */
+
+/* } */
+
+/* Large screens */

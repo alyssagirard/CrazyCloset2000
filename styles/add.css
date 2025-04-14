@@ -1,2 +1,16 @@
 /* Your site must support distinct layouts for large and small screens using media queries. Use comments to note where you completed this requirement.
 You may do this in a variety of ways. For example, you can move images or switch blocks between rows (for large screens) and columns (for small). */
+div {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#add-form-div {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #F1F3F4;
+}
