@@ -2,11 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Add</title>
-    <link rel="stylesheet" href="add.css">
+    <title>Add Items</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-    <h1>Add page</h1>
+    <h1>Add Items</h1>
+    <form>
+        <!-- Name of Item -->
+        <label for="inputItemName">Item Name</label><br>
+        <input type="text" id="inputItemName" name="inputItemName" placeholder="Enter item name here"><br>
+        <!-- Category -->
+        <label for="inputCategory">Category</label><br>
+        <input type="text" id="inputCategory" name="inputCategory" placeholder="Enter category here"><br>
+        <!-- Subcategory (if any) -->
+        <label for="inputSubcategory">Subcategory</label><br>
+        <input type="text" id="inputSubcategory" name="inputSubcategory" placeholder="Enter subcategory here (if any)"><br>
+        <!-- Color -->
+        <label for="inputColor">Color</label><br>
+        <input type="text" id="inputColor" name="inputColor" placeholder="Enter color here"><br>
+        <!-- Size -->
+        <label for="inputSize">Size:</label><br>
+        <input type="text" id="inputSize" name="inputSize" placeholder="Enter size here"><br>
+        <button type="submit">Submit</button>
+    </form>
     <button type="button" onclick="location.href='index.html'">Return to Home Page</button>
 </body>
 </html>
