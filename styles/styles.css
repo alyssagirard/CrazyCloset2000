@@ -191,6 +191,7 @@ button {
         background-color: #72383D;
         width: 100%;
         flex: 1 1 auto; /* trying to get the text to be even across the page (not working)*/
+        color: #F1F3F4; /*font color not changing.. why!?*/
     }
   }
 
