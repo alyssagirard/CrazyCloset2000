@@ -174,8 +174,24 @@ button {
     border: 1px dotted black;
   }
 
-  @media (min-width: 450px) {
+  @media (max-width: 886px) {
 
+    .parent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-nav {
+        background-color: #72383D;
+        width: 100%;
+        flex: 1 1 auto; /* trying to get the text to be even across the page (not working)*/
+    }
   }
 
 /* Small screens */
