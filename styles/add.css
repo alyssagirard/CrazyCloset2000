@@ -8,11 +8,26 @@ div {
     font-family: sans-serif;
 }
 
+body {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.main-header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: flex;
+  justify-content: center;
+}
+
 #add-form-div {
+    display: flex;
+    justify-content: left;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #F1F3F4;
+    /* border: 1px solid #ccc;
+    border-radius: 10px; */
+    background-color: #9CABB4;
+    grid-row: 2 / span 2;
 }
 
 #dropbox {

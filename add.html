@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Items</title>
-    <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="/styles/add.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/add.css">
 
 </head>
 <body>
@@ -33,7 +33,6 @@
             <button type="button" onclick="location.href='index.html'">Return to Home Page</button>
         </form>
     </div>
-    <h2>Input</h2>
     <form name="uploadForm" action="#">
       <div id="dropbox">
         <div>Drop photos here or use the Browse button below</div>
@@ -44,12 +43,11 @@
         <output id="fileNum">0</output>;
         <label for="fileSize">Total size:</label>
         <output id="fileSize">0</output>
+        <button type="submit" value="Send file">Upload</button>
       </div>
-      <button type="submit" value="Send file">Upload</button>
     </form>
-  
     <h2>Output</h2>
     <div id="preview"></div>
-    <script src="main.js"></script>
+    <script src="scripts/fileLoader.js"></script>
 </body>
 </html>
