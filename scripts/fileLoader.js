@@ -103,13 +103,15 @@ async function handleFiles(files) {
   document.getElementById("fileSize").textContent = output;
 }
 
+
+//this is where the output is previewed
 function previewImage(preview, file) {
   const figure = document.createElement("figure");
   const img = document.createElement("img");
   // img.classList.add("obj");
   img.file = file;
   const caption = document.createElement("figcaption");
-  caption.textContent = file.name;
+  caption.textContent = file.name; //replace this with user input
   figure.appendChild(img);
   figure.appendChild(caption);
   figure.classList.add("obj");
