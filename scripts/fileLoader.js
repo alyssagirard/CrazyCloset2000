@@ -111,7 +111,13 @@ function previewImage(preview, file) {
   // img.classList.add("obj");
   img.file = file;
   const caption = document.createElement("figcaption");
-  caption.textContent = file.name; //replace this with user input
+
+
+  const inputName = document.getElementById('inputItemName');
+  const inputVal = inputName.value
+  console.log(inputVal);
+  caption.textContent = inputVal; //replace this with user input
+  //get name from form ^^^^
   figure.appendChild(img);
   figure.appendChild(caption);
   figure.classList.add("obj");
