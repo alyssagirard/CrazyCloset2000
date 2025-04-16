@@ -3,9 +3,6 @@ $('.carousel').carousel({
     interval: false,
   });
 
-
-
-
 // Call to weather API
 const weatherButton = document.getElementById("weatherButton");
 let weatherP = document.getElementById("weatherP");
@@ -29,6 +26,8 @@ weatherDiv.addEventListener('click', function() {
     weatherDiv.style.display = "none";
 })
 
+// Call to randomize API
+
 
 
 // Lower buttons functionality
@@ -41,3 +40,5 @@ const favsButton = document.getElementById('favorites-button');
 favsButton.addEventListener('click', function() {
     window.location.href = 'favorites.html';
 });
+
+// Create an object out of add form submission
