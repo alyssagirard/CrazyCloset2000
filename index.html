@@ -13,19 +13,22 @@
                 <h1 class="logo">CRAZY CLOSET 2000</h1>
                 <nav class="main-nav">
                     <ul class="nav-list nav">
-                      <li>
-                        <a class="btn" href="report.html">Report</a>
-                      </li>
-                      <li>
-                        <button class="btn dropdown-toggle" type="button" id="goShoppingButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Go Shopping
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="droppedfilterMenuButton">
-                          <a class="dropdown-item" href="https://www.amazon.com/">Amazon</a>
-                          <a class="dropdown-item" href="https://www.target.com/">Target</a>
-                          <a class="dropdown-item" href="https://www.asos.com/us/">Asos</a>
-                      </div>
-                      </li>
+                        <!-- Weather -->
+                        <li>
+                        <a class="btn" href="#" id="weatherButton">Weather</a>
+                        </li>
+                        <!-- Report -->
+                        <li>
+                          <a class="btn" href="report.html">Report</a>
+                        </li>
+                        <!-- Shopping -->
+                        <li>
+                          <a class="btn" href="shopping.html">Go Shopping</a>
+                        </li>
+                        <!-- Wear -->
+                        <li>
+                          <a class="btn" href="#">Wear</a>
+                        </li>
                         <!-- Filter -->
                         <li class="nav-item dropdown">
                             <button class="btn dropdown-toggle" type="button" id="filterMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,21 +61,14 @@
                                 <a class="dropdown-item" href="#">Add Head Image</a>
                             </div>
                         </li>
-
-                        <!-- Wear -->
-                        <li class="nav-item dropdown">
-                            <button class="btn dropdown-toggle" type="button" id="wearMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Wear
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dkMenuButton">
-                                <a class="dropdown-item" href="#">Idk if this should be a dropdown but it made sense LOL</a>
-                            </div>
-                        </li>
                     </ul>
                 </nav>
             </header>
         </div>
         <div class="div2">
+            <div id="weatherDiv">
+              <p id="weatherP"></p>
+            </div>
             <img id="curr-head" height="100" width="100" src="images/heads/default-head.png" alt="Current Head">
             <img id="curr-shirt" height="100" width="100" src="images/shirts/default-shirt.png" alt="Currently Worn Shirt">
             <img id="curr-pants" height="100" width="100" src="images/pants/default-pants.png" alt="Currently Worn Pants">
