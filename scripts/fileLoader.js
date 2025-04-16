@@ -103,7 +103,6 @@ async function handleFiles(files) {
   document.getElementById("fileSize").textContent = output;
 }
 
-
 //this is where the output is previewed
 function previewImage(preview, file) {
   const figure = document.createElement("figure");
@@ -112,11 +111,18 @@ function previewImage(preview, file) {
   img.file = file;
   const caption = document.createElement("figcaption");
 
-
-  const inputName = document.getElementById('inputItemName');
-  const inputVal = inputName.value
-  console.log(inputVal);
-  caption.textContent = inputVal; //replace this with user input
+  fetch('https://random-word-api.herokuapp.com/word')
+    .then((response) => {
+      console.log(response.json());
+    })
+    .then((data) => {
+      let name = data;
+      console.log(data);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+  caption.textContent = document.getElementById('inputItemName').value; //replace this with user input
   //get name from form ^^^^
   figure.appendChild(img);
   figure.appendChild(caption);
