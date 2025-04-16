@@ -30,6 +30,13 @@ function dragover(e) {
   e.preventDefault();
 }
 
+async function getName() {
+  const response = await fetch('https://random-word-api.herokuapp.com/word');
+  const randoWord = response.json();
+  console.log(randoWord);
+  return randoWord;
+}
+
 async function init() {
   const preview = document.getElementById("preview");
   const opfsRoot = await navigator.storage.getDirectory();
@@ -110,19 +117,8 @@ function previewImage(preview, file) {
   // img.classList.add("obj");
   img.file = file;
   const caption = document.createElement("figcaption");
-
-  fetch('https://random-word-api.herokuapp.com/word')
-    .then((response) => {
-      console.log(response.json());
-    })
-    .then((data) => {
-      let name = data;
-      console.log(data);
-    })
-    .catch(function(error) {
-      console.log(error);
-    });
-  caption.textContent = document.getElementById('inputItemName').value; //replace this with user input
+  const word = getName();
+  caption.textContent = word; //replace this with user input
   //get name from form ^^^^
   figure.appendChild(img);
   figure.appendChild(caption);
