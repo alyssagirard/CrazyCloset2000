@@ -31,10 +31,14 @@ function dragover(e) {
 }
 
 async function getName() {
-  const response = await fetch('https://random-word-api.herokuapp.com/word');
-  const randoWord = response.json();
-  console.log(randoWord);
-  return randoWord;
+  try {
+    const response = await fetch('https://random-word-api.vercel.app/api?words=1');
+    const randoWord = await response.json();
+    console.log(randoWord);
+    return randoWord;
+  } catch (err) {
+    console.eror(err);
+  }
 }
 
 async function init() {
@@ -117,9 +121,13 @@ function previewImage(preview, file) {
   // img.classList.add("obj");
   img.file = file;
   const caption = document.createElement("figcaption");
-  const word = getName();
-  caption.textContent = word; //replace this with user input
-  //get name from form ^^^^
+
+  getName().then(word => {
+    caption.textContent = word;
+  });
+
+
+
   figure.appendChild(img);
   figure.appendChild(caption);
   figure.classList.add("obj");
