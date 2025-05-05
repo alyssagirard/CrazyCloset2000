@@ -242,6 +242,9 @@ function populateFavoritesHTML() {
     const container = document.getElementById("favoritesContainer");
     container.innerHTML = "";
     let storedFavs = localStorage.getItem("favOutfits");
+    if (storedFavs) {
+        favOutfits = JSON.parse(storedFavs);
+    }
     favOutfits.forEach((outfit, index) => {
         let outfitDiv = document.createElement("div");
         outfitDiv.classList.add("card");
