@@ -15,7 +15,8 @@ let defaultTop = {
     color: "White",
     size: "Medium",
     image: "images/shirts/default-shirt.png",
-    altText: "First Top in Closet"
+    altText: "First Top in Closet",
+    wears: 0
 }
 
 // Create default bottoms
@@ -25,7 +26,8 @@ let defaultBottoms = {
     color: "Beige",
     size: "Medium",
     image: "images/pants/default-pants.png",
-    altText: "First Pants in Closet"
+    altText: "First Pants in Closet",
+    wears: 0
 }
 
 // Create default shoes
@@ -35,7 +37,8 @@ let defaultShoes = {
     color: "Black",
     size: "Medium",
     image: "images/shoes/default-shoes.png",
-    altText: "First Shoes in Closet"
+    altText: "First Shoes in Closet",
+    wears: 0
 }
 
 let tops = [];
@@ -149,7 +152,8 @@ function updateCurrentOutfitFromCarousel() {
         color: activeTop.color,
         size: activeTop.size,
         image: activeTop.src,
-        altText: activeTop.alt
+        altText: activeTop.alt,
+        wears: activeTop.wears
     };
     document.getElementById("curr-shirt").src = activeTop.src;
     document.getElementById("curr-shirt").alt = activeTop.alt;
@@ -162,7 +166,8 @@ function updateCurrentOutfitFromCarousel() {
         color: activeBottom.color,
         size: activeBottom.size,
         image: activeBottom.src,
-        altText: activeBottom.alt
+        altText: activeBottom.alt,
+        wears: activeBottom.wears
     };
     document.getElementById("curr-pants").src = activeBottom.src;
     document.getElementById("curr-pants").alt = activeBottom.alt;
@@ -175,7 +180,8 @@ function updateCurrentOutfitFromCarousel() {
         color: activeShoes.color,
         size: activeShoes.size,
         image: activeShoes.src,
-        altText: activeShoes.alt
+        altText: activeShoes.alt,// i actually messed up and need to change a lot of this to defaultshoes also do that to the above but my head hurts lol
+        wears: activeShoes.wears
     };
     document.getElementById("curr-shoes").src = activeShoes.src;
     document.getElementById("curr-shoes").alt = activeShoes.alt;
