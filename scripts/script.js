@@ -222,6 +222,7 @@ laundryButton.addEventListener('click', function() {
 const favsButton = document.getElementById('favorites-button');
 favsButton.addEventListener('click', function() {
     window.location.href = 'favorites.html';
+    populateFavoritesHTML();
 });
 
 // Save button functionality (TODO MORE, RN JUST ADDS OBJECT TO AN ARRAY. IN FAVORITES.HTML WE SHOULD MAKE IT SO IT LOOPS THRU THE ARRAY
@@ -229,11 +230,35 @@ let favOutfits = []
 
 const saveButton = document.getElementById("saveOutfitBtn");
 saveButton.addEventListener('click', function() {
-    let newFav = currentlyWorn; //will it not work bc they all have the same variable name? i havent tested this lol
-    favOutfits.push(newFav);  // we dont have enough stuff actually logged in the arrays w js to test it rn lol
+    let newFav = JSON.parse(JSON.stringify(currentlyWorn)); //will it not work bc they all have the same variable name? i havent tested this lol
+    favOutfits.push(newFav);   // we dont have enough stuff actually logged in the arrays w js to test it rn lol
+    localStorage.setItem("favOutfits", JSON.stringify(favOutfits));
+    console.log("Saved outfit:", newFav);
 })
 console.log(favOutfits);
 
+// Put all of the outfits in the favOutfits array onscreen HAVE NOT TESTED YET LOL
+function populateFavoritesHTML() {
+    const container = document.getElementById("favoritesContainer");
+    container.innerHTML = "";
+    let storedFavs = localStorage.getItem("favOutfits");
+    favOutfits.forEach((outfit, index) => {
+        let outfitDiv = document.createElement("div");
+        outfitDiv.classList.add("card");
+        outfitDiv.style.width = "250px";
+        let cardBody = `
+            <div class="card-body">
+                <h5 class="card-title">Outfit ${index + 1}</h5>
+                <img src="${outfit.head.image}" alt="${outfit.head.altText}" width="75" height="75">
+                <img src="${outfit.top.image}" alt="${outfit.top.altText}" width="75" height="75">
+                <img src="${outfit.bottoms.image}" alt="${outfit.bottoms.altText}" width="75" height="75">
+                <img src="${outfit.shoes.image}" alt="${outfit.shoes.altText}" width="75" height="75">
+            </div>
+        `;
+        outfitDiv.innerHTML = cardBody;
+        container.appendChild(outfitDiv);
+    });
+}
 
 // Create an object out of add form submission
 
